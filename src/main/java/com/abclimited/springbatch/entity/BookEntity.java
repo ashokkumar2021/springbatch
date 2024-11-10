@@ -1,13 +1,16 @@
 package com.abclimited.springbatch.entity;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 
 @Entity
 @Table(name= "books_details")
 @Data
+@Getter
+@Setter
 public class BookEntity {
 
     @Id
@@ -20,27 +23,4 @@ public class BookEntity {
 
     private Integer yearOfPublish;
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setYearOfPublish(Integer yearOfPublish) {
-        this.yearOfPublish = yearOfPublish;
-    }
-
-    public Integer getYearOfPublish() {
-        return yearOfPublish;
-    }
 }
